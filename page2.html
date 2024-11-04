@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Weather Update</title>
+        <link rel="stylesheet" href="style2.css">
+        <script src="https://kit.fontawesome.com/47eb9c3571.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <div class="sidebar">
+            <div class="logo_content">
+                <div class="logo">
+                    <i class="fa-brands fa-cloudflare"></i>
+                    <div class="logo_name">ClimaPro</div>
+                </div>
+
+                <i class="fa-solid fa-bars"></i>
+            </div> 
+
+            <div class="nav_list">
+                <ul class="search">
+                    <li>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search"> 
+                    </li>
+                </ul>
+
+                <!--START OF WEATHER SIDEBAR INFO-->
+                <div class="weather">
+                    <div class="weather-icon">
+                        <i class="fa-solid fa-cloud-sun" style="color: #fec016;"></i>
+                    </div>
+
+                    <div class="temperature">
+                        <span>31.6</span>
+                        <span>°C</span>
+                    </div>
+
+                    <div class="description">
+                        <h2>overcast clouds</h2>
+                        <p>_________________________</p>
+                    </div>
+
+                    <div class="humidity">
+                        <i class="fa-solid fa-droplet"></i>
+                        <div class="info">
+                            <span>Humidity:</span>
+                            <span>71%</span>
+                        </div>
+                    </div>
+
+                    <div class="wind-speed">
+                        <i class="fa-solid fa-wind"></i>
+                        <div class="info">
+                            <span>Wind Speed:</span>
+                            <span>4.2 m/s</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="home_content">
+            <div class="country-info">
+                <h1 class="country">Manila, Philippines</h1>
+            </div>
+
+            <div class="coordination">
+                <span>45.133</span>
+                <span>,</span>
+                <span>7.367</span>
+            </div>
+
+            <div class="text">
+                <p>Weather Highlight</p>
+                <div class="text-info">
+                    <span>Last Updated: </span>
+                    <span>2024-10-31 16:00</span>
+                </div>
+            </div>
+
+            <div class="temp">
+                <div class="temp-header">
+                    <h5 id="temp-feel">3-days Sunrise/Moonrise</h5>
+                </div>
+
+                <div class="first-row">
+                    <div class="feels">
+                        <!--<i class="fa-solid fa-wind"></i>-->
+                        <h3 class="date">2024-11-01</h3>
+                        <div class="sun-info">
+                            <i class="fa-solid fa-sun"></i>
+                            <span>05:52 AM</span>
+                        </div>
+                        <div class="moon-info">
+                            <i class="fa-solid fa-moon"></i>
+                            <span>05:25 PAM</span>
+                        </div>
+                    </div>
+                
+                    <div class="wind">
+                        <!--<i class="fa-solid fa-wind"></i>-->
+                        <h3 class="date">2024-11-02</h3>
+                        <div class="sun-info">
+                            <i class="fa-solid fa-sun"></i>
+                            <span>05:52 AM</span>
+                        </div>
+                        <div class="moon-info">
+                            <i class="fa-solid fa-moon"></i>
+                            <span>05:25 AM</span>
+                        </div>
+                    </div>
+                
+                    <div class="heat">
+                         <!--<i class="fa-solid fa-wind"></i>-->
+                        <h3 class="date">2024-11-03</h3>
+                        <div class="sun-info">
+                            <i class="fa-solid fa-sun"></i>
+                            <span>05:52 AM</span>
+                        </div>
+                        <div class="moon-info">
+                            <i class="fa-solid fa-moon"></i>
+                            <span>05:25 AM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="temp-header">
+                    <h5 id="temp-feel">Visibility & Athmosphere</h5>
+                </div>
+
+                <div class="vis-dew-air">
+                    <div class="visibility">
+                        <i class="fa-solid fa-eye"></i>
+                        <p>Avg. Visibility:</p>
+                        <span>9.0</span>
+                    </div>
+    
+                    <div class="dewpoint">
+                        <i class="fa-solid fa-temperature-high"></i>
+                        <p>Dewpoint:</p>
+                        <span>23.9</span>
+                        <span>°C</span>
+                    </div>
+    
+                    <div class="carbon-monoxide">
+                        <i class="fa-solid fa-temperature-high"></i>
+                        <p>Air Quality (CO):</p>
+                        <span>597.55</span>
+                    </div>
+
+                    <div class="nitrogen dioxide">
+                        <i class="fa-solid fa-temperature-high"></i>
+                        <p>Nitroget Dioxide (NO₂):</p>
+                        <span>15.355</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wind-pressure">
+                <p id="wind-condition">Marine and Athmosperic Conditions</p>
+                <div class="wind-header">
+                    <p>Stay informed on coastal tides and wind patterns with our real-time marine and atmospheric updates—designed to help you navigate every shift in the sea and sky.</p>
+                </div>
+                <div class="second-row">
+                    <div class="degree">
+                        <i class="fa-solid fa-temperature-low fa-beat"></i>
+                        <span>Degree:</span>
+                        <p>236</p>
+                    </div>
+
+                    <div class="direction">
+                        <i class="fa-regular fa-compass fa-shake"></i>
+                        <span>Direction:</span>
+                        <p>WSW</p>
+                    </div>
+
+                    <div class="pressure-mb">
+                        <i class="fa-brands fa-cloudscale fa-spin-pulse"></i>
+                        <span>Pressure (mb):</span>
+                        <p>1006.0</p>
+                    </div>
+
+                    <div class="pressure-in">
+                        <i class="fa-solid fa-cloud-rain fa-beat-fade"></i>
+                        <span>Precipitation (in):</span>
+                        <p>0.04</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page">
+                <a href="index.html"><</a>
+                <a href="index.html">1</a>
+                <a href="page2.html" class="open">2</a>
+                <a href="page2.html">></a>
+            </div>
+        </div>
+       <script src="interaction.js"></script>
+    </body>
+</html>

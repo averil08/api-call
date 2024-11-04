@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Weather Update</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/47eb9c3571.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <div class="sidebar">
+            <div class="logo_content">
+                <div class="logo">
+                    <i class="fa-brands fa-cloudflare"></i>
+                    <div class="logo_name">ClimaPro</div>
+                </div>
+
+                <i class="fa-solid fa-bars"></i>
+            </div> 
+
+            <div class="nav_list">
+                <ul class="search">
+                    <li>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search"> 
+                    </li>
+                </ul>
+
+                    <!--START OF WEATHER SIDEBAR INFO-->
+                <div class="weather">
+                    <div class="weather-icon">
+                        <i class="fa-solid fa-cloud-sun" style="color: #fec016;"></i>
+                    </div>
+
+                    <div class="temperature">
+                        <span>31.6</span>
+                        <span>°C</span>
+                    </div>
+
+                    <div class="description">
+                        <h2>overcast clouds</h2>
+                        <p>_________________________</p>
+                    </div>
+
+                    <div class="humidity">
+                        <i class="fa-solid fa-droplet"></i>
+                        <div class="info">
+                            <span>Humidity:</span>
+                            <span>71%</span>
+                        </div>
+                    </div>
+
+                    <div class="wind-speed">
+                        <i class="fa-solid fa-wind"></i>
+                        <div class="info">
+                            <span>Wind Speed:</span>
+                            <span>4.2 m/s</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--HOME CONTENT-->
+        <div class="home_content">
+            <div class="country-info">
+                <h1 class="country">Manila, Philippines</h1>
+            </div>
+
+            <div class="coordination">
+                <span>45.133</span>
+                <span>,</span>
+                <span>7.367</span>
+            </div>
+
+            <div class="text">
+                <p>Weather Highlight</p>
+                <div class="text-info">
+                    <span>Last Updated: </span>
+                    <span>2024-10-31 16:00</span>
+                </div>
+            </div>
+
+            <div class="temperature">
+                <div class="temp-header">
+                    <h5 id="temp-feel">Temperature Feels:</h5>
+                </div>
+
+                <div class="first-row">
+                    <div class="feels">
+                        <i class="fa-solid fa-temperature-three-quarters"></i>
+                        <span>Real Feel:</span>
+                        <span>31.6</span>
+                    </div>
+                
+                    <div class="wind">
+                        <i class="fa-solid fa-wind"></i>
+                        <span>Wind Chill:</span>
+                        <span>26.8</span>
+                    </div>
+                
+                    <div class="heat">
+                        <i class="fa-regular fa-sun"></i>
+                        <span>Heat Index:</span>
+                        <span>87.1</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wind-pressure">
+                <p id="wind-condition">Wind Conditions</p>
+                <div class="wind-header">
+                    <p>Explore real-time details of wind conditions, including speed, direction, and atmospheric pressure, to gain a better understanding of the atmospheric behavior and weather patterns impacting your area. This information can help you anticipate shifts in the weather and stay informed about how wind patterns affect your local environment.</p>
+                </div>
+                <div class="second-row">
+                    <div class="degree">
+                        <i class="fa-solid fa-temperature-low fa-beat"></i>
+                        <span>Degree:</span>
+                        <p>236</p>
+                    </div>
+
+                    <div class="direction">
+                        <i class="fa-regular fa-compass fa-shake"></i>
+                        <span>Direction:</span>
+                        <p>WSW</p>
+                    </div>
+
+                    <div class="pressure-mb">
+                        <i class="fa-brands fa-cloudscale fa-spin-pulse"></i>
+                        <span>Pressure (mb):</span>
+                        <p>1006.0</p>
+                    </div>
+
+                    <div class="pressure-in">
+                        <i class="fa-solid fa-cloud-rain fa-beat-fade"></i>
+                        <span>Precipitation (in):</span>
+                        <p>0.04</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page">
+                <a href="index.html"><</a>
+                <a href="index.html" class="open">1</a>
+                <a href="page2.html">2</a>
+                <a href="page2.html">></a>
+            </div>
+        </div>
+       <script src="interaction.js"></script>
+    </body>
+</html>
