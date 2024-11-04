@@ -1,0 +1,379 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*padding, border are included in element's total width, height. */
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background: #0b111d;
+    overflow: hidden;
+}
+
+.sidebar {
+    position: fixed;
+    height: 100%;
+    width: 78px;
+    background: #202c3c;
+    padding: 6px 14px;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active {
+    width: 250px;
+}
+
+.sidebar .logo_content .logo {
+    color:#ebf2f9;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    opacity: 0;
+}
+
+.sidebar.active .logo_content .logo {
+    opacity: 1;
+    pointer-events: none;
+}
+
+.logo_content .logo i {
+    font-size: 30px;
+    margin-right: 5px;
+}
+
+.logo_content .logo .logo_name {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/*menu bar*/
+.sidebar .logo_content .fa-bars {
+    /*targets sidebar>btn (menu)*/
+    color:#ebf2f9;
+    position: absolute;
+    left: 60%;
+    top: 6px;
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    transform: translateX(-60%); /*moves element 50% horizontally of its own width to left.*/
+}
+
+.sidebar.active .fa-bars {
+    left: 90%; /*to be modified*/
+}
+
+.sidebar .logo_content .fa-bars:hover {
+    pointer-events: auto;
+    cursor: pointer;
+    background: #354764;
+    border-radius: 8px;
+}
+
+.sidebar .nav-list {
+    margin-top: 20px;
+}
+
+/*SEARCH BAR: icon & bar*/
+.sidebar ul li {
+    list-style: none;
+    position: relative;
+    margin: 20px 5px;
+    height: 50px;
+    width: 100%;
+    line-height: 50px;
+    left: 60%;
+    transform: translateX(-60%); /*moves element 50% horizontally of its own width to left.*/
+}
+
+.sidebar ul li .fa-magnifying-glass {
+    position: absolute;
+    z-index: 99;
+    color: #354764;
+    font-size: 22px;
+    transition: all 0.5 ease;
+}
+
+.sidebar ul li .fa-magnifying-glass:hover{
+    background: #354764;
+    color: #fff;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.sidebar ul li input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 12px;
+    border: none; /*removes line around border*/
+    outline: none; /*line around outside of element's*/
+    padding-left: 50px;
+    font-size: 18px; 
+    color: #354764; 
+}
+
+.sidebar ul li i {
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px; /*icons and text face each other*/
+    text-align: center; /*instead of adding padding in border-radius, align center the hover color*/
+}
+
+.sidebar .weather {
+    opacity: 0;
+    transition: all 0.1s ease;
+}
+
+.sidebar.active .weather {
+    opacity: 1;
+    transition: all 0.9s ease;
+}
+
+/*weather icon*/
+.sidebar .weather .weather-icon {
+    font-size: 160px;
+    text-align: center;
+}
+
+.sidebar .weather .weather-icon .fa-cloud-sun {
+    opacity: 0;
+}
+
+.sidebar.active .weather .weather-icon .fa-cloud-sun {
+    opacity: 1;
+    transition: all 0.9s ease;
+}
+
+.sidebar.active .weather .weather-icon i {
+    color: #eb8d17;
+}
+
+.sidebar .weather .temperature {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    color: #ebf2f9;
+}
+
+.sidebar .weather .description {
+    text-align: center;
+    color: #354764;
+    text-transform: capitalize;
+}
+
+.sidebar .weather .description h2 {
+    font-weight: 400;
+    color: #ebf2f9;
+}
+
+.sidebar .weather .humidity {
+    margin: 30px 0 20px 0;
+    line-height: 20px;
+    text-align: center;
+}
+
+.sidebar .weather .info {
+    color:#ebf2f9;
+}
+
+.sidebar .weather .humidity, .wind-speed {
+    color: #ebf2f9;
+}
+.sidebar .weather .humidity i{
+    font-size: 23px;
+    line-height: 20px;
+    padding-right: 5px;
+}
+
+.sidebar .weather .wind-speed {
+    line-height: 20px;
+    text-align: center;
+}
+
+.sidebar .weather .wind-speed i{
+    font-size: 23px;
+    padding-right: 5px;
+}
+
+/*content*/
+.home_content {
+    position: absolute;
+    height: 100%;
+    overflow-y: auto;
+    width: calc(100% - 78px);
+    left: 78px;
+    transition: all 0.5s ease;
+    color:#dadee9;
+}
+
+.home_content .country-info .country {
+    margin: 20px 25px 0; /*top, right left, bot*/
+}
+
+.home_content .coordination {
+    margin: 0 25px;
+    text-align: left;
+    font-weight: 500;
+    color: #676d79;
+    font-size: 20px;
+}
+
+.home_content .text p {
+    font-size: 25px;
+    margin: 18px 25px;
+    padding-top: 40px;
+    font-weight: 500;
+}
+
+.home_content .text .text-info {
+    font-size: 18px;
+    margin: 18px 25px;
+}
+
+/*TEMPERATURE PAGE 1*/
+.home_content .temperature {
+    width: 800px;
+    height: 200px;
+    background:#354764;
+    margin: 0 25px;
+    border-radius: 16px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column; /*added*/
+}
+
+.home_content .temperature temp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home_content .temperature .temp-header #temp-feel {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.home_content .temperature .first-row {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+    padding: 40px;
+}
+
+.home_content .temperature .first-row i {
+    display: block;
+    text-align: center;
+    font-size: 70px;
+    padding-bottom: 10px;
+    color:#eb8d17;
+}
+
+/*SECOND ROW*/
+.home_content .wind-pressure {
+    margin: 0 17px;
+    border-radius: 16px;
+    padding: 18px;
+}
+.home_content .wind-pressure #wind-condition  {
+    font-size: 25px;
+    font-weight: 500;
+    padding: 25px 0 0;
+}
+
+.home_content .wind-pressure .wind-header p{
+    font-size: 17px;
+    font-weight: 400;
+    padding-top: 10px;
+    text-align: justify;
+}
+
+.home_content .wind-pressure .second-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 12px 0;
+}
+
+.home_content .wind-pressure .second-row .degree, .direction, .pressure-mb, .pressure-in {
+    background: #354764;
+    width: 200px;   
+    height: 100px;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    color: #eb8d17;
+}
+
+.home_content .wind-pressure .second-row span {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.home_content .wind-pressure .second-row i {
+    font-size: 24px;
+}
+
+.home_content .wind-pressure .second-row p {
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.home_content .page {
+    text-align: center;
+}
+
+.page a{
+    color:#eb8d17;
+    text-decoration: none;
+    padding: 8px 15px;
+    display: inline-block;
+}
+
+.page a.open{
+    background:#354764;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.page a:hover:not(.open){
+    background:#fff;
+    border-radius: 5px;
+}
+.sidebar.active ~ .home_content {
+    width: calc(100% - 250px);
+    left: 250px;
+    opacity: 1;
+}
+
+.home_content {
+    width: min(900px, 100% - 3rem);
+    margin-inline: auto;
+}
+
+@media only screen and (max-width: 600px) {
+    .sidebar.active {
+        transition: all 0.8s ease;
+        width: 100%
+    }
+
+    .sidebar.active ~ .home_content {
+        opacity:0;
+        transition: all 0.4s ease;
+        width: 0;
+    }
+
+    .home_content .temperature .first-row {
+        flex-direction: column;
+    }
+}
