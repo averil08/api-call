@@ -140,9 +140,12 @@ body {
 }
 
 /*weather icon*/
-.sidebar .weather .weather-icon {
-    font-size: 160px;
-    text-align: center;
+.sidebar .weather .weather-icon #weather-icon{
+    width: 230px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .sidebar .weather .weather-icon .fa-cloud-sun {
@@ -154,9 +157,6 @@ body {
     transition: all 0.9s ease;
 }
 
-.sidebar.active .weather .weather-icon i {
-    color: #eb8d17;
-}
 
 .sidebar .weather .temperature {
     text-align: center;
