@@ -15,7 +15,7 @@ searchBtn.onclick = function () {
 // Replace with your actual API key
 const apiKey = "a876763bb0104cf2ad575748243110";
 const city = "London";
-const apiUrl = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`;
+const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`;
 
 // Function to fetch weather data
 async function getWeatherData() {
