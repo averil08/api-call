@@ -10,7 +10,7 @@ body {
     min-height: 100vh;
     width: 100%;
     background: #0b111d;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .sidebar {
@@ -209,7 +209,6 @@ body {
 .home_content {
     position: absolute;
     height: 100%;
-    overflow-y: auto;
     width: calc(100% - 78px);
     left: 78px;
     transition: all 0.5s ease;
@@ -361,10 +360,10 @@ body {
     margin-inline: auto;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 500px) {
     .sidebar.active {
         transition: all 0.8s ease;
-        width: 100%
+        overflow: hidden;
     }
 
     .sidebar.active ~ .home_content {
