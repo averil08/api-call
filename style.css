@@ -240,11 +240,9 @@ body {
 }
 
 /*TEMPERATURE PAGE 1*/
-.home_content .temperature {
-    width: 800px;
-    height: 200px;
+.home_content .temperature { /*width and height removed*/
     background:#354764;
-    margin: 0 25px;
+    margin: 0 60px 0 25px; /*top, right, bot, left*/
     border-radius: 16px;
     padding: 15px;
     display: flex;
@@ -267,6 +265,7 @@ body {
     justify-content: space-evenly;
     gap: 30px;
     padding: 40px;
+    text-align: center;
 }
 
 .home_content .temperature .first-row i {
@@ -294,19 +293,18 @@ body {
     font-weight: 400;
     padding-top: 10px;
     text-align: justify;
+    margin: 16px 25px 10px 0;
 }
 
 .home_content .wind-pressure .second-row {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    gap: 10px;
     padding: 12px 0;
 }
 
 .home_content .wind-pressure .second-row .degree, .direction, .pressure-mb, .pressure-in {
     background: #354764;
-    width: 200px;   
-    height: 100px;
     border-radius: 12px;
     padding: 20px;
     text-align: center;
@@ -374,5 +372,17 @@ body {
 
     .home_content .temperature .first-row {
         flex-direction: column;
+    }
+
+    .home_content .wind-pressure .second-row {
+        flex-direction: column;
+    }
+
+    .home_content .temperature .temp-header #temp-feel {
+        text-align: center;
+    }
+
+    .home_content .wind-pressure .second-row {
+        margin: 0 17px 0 10px;/*top, right, bot, left*/
     }
 }
