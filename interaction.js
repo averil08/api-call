@@ -16,15 +16,17 @@ searchBtn.onclick = function () {
 const apiKey = "a876763bb0104cf2ad575748243110";
 const searchBox = document.querySelector(".search input");
 
+
 // Function to fetch weather data
 async function getWeatherData(location) {
     const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${location}`;
 
+
     try {
         const response = await fetch(apiUrl);
         const data = await response.json();
-        const searchBox = document.querySelector(".search input");
-        const searchBtn = document.querySelector(".search button");
+        //const searchBox = document.querySelector(".search input");
+        //const searchBtn = document.querySelector(".search button");
 
         // Weather icon
         document.getElementById("weather-icon").src = `https:${data.current.condition.icon}`;
@@ -45,19 +47,24 @@ async function getWeatherData(location) {
         document.querySelector(".heat span:last-child").innerText = `${data.current.heatindex_c}°C`;
         
         // Wind conditions
-        document.querySelector(".degree p").innerText = data.current.wind_degree;
-        document.querySelector(".direction p").innerText = data.current.wind_dir;
-        document.querySelector(".pressure-mb p").innerText = `${data.current.pressure_mb} mb`;
-        document.querySelector(".pressure-in p").innerText = `${data.current.precip_in} in`;
+        document.querySelector(".degree p").innerText = data.current.vis_km;
+        document.querySelector(".direction p").innerText = data.current.dewpoint_c;
+        document.querySelector(".pressure-mb p").innerText = data.current.gust_mph;
+        document.querySelector(".pressure-in p").innerText = data.current.gust_kph;
 
     } catch (error) {
         console.error("Error fetching weather data:", error);
-    }
+    } 
 }
 
 searchBtn.addEventListener("click", () => {
     const location = searchBox.value;
     getWeatherData(location);
 })
+
+
 // Call the function when the page loads
 document.addEventListener("DOMContentLoaded", () => getWeatherData("London"));
+
+/*LOADING*/
+const loadingIndicator = document.getElementById("loading");
