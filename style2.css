@@ -80,6 +80,7 @@ body {
     margin-top: 20px;
 }
 
+
 /*SEARCH BAR: icon & bar*/
 .sidebar ul li {
     list-style: none;
@@ -195,12 +196,14 @@ body {
     text-align: center;
 }
 
-.sidebar .weather .info {
+.sidebar .weather .info:last-child {
     color:#ebf2f9;
 }
 
 .sidebar .weather .humidity, .wind-speed {
     color: #ebf2f9;
+    font-weight: 500;
+    font-size: 30px;
 }
 .sidebar .weather .humidity i{
     font-size: 23px;
@@ -218,6 +221,9 @@ body {
     padding-right: 5px;
 }
 
+.sidebar .weather i {
+    color:#eb8d17;
+}
 /*content*/
 .home_content {
     position: absolute;
@@ -302,6 +308,7 @@ body {
 
 .home_content .temp .first-row .moon-info span, .home_content .temp .first-row .sun-info span {
     font-size: 19px;
+    padding: 14px;
 }
 .home_content .temp .first-row .sun-info .fa-sun, .home_content .temp .first-row .moon-info .fa-moon {
     font-size: 25px;
