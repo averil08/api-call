@@ -188,6 +188,7 @@ body {
 
 .sidebar .weather .humidity, .wind-speed {
     color: #ebf2f9;
+    font-weight: 500;
 }
 .sidebar .weather .humidity i{
     font-size: 23px;
@@ -203,6 +204,10 @@ body {
 .sidebar .weather .wind-speed i{
     font-size: 23px;
     padding-right: 5px;
+}
+
+.sidebar .weather i {
+    color:#eb8d17;
 }
 
 /*content*/
